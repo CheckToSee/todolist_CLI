@@ -99,7 +99,7 @@ fn main() -> Result<()> {
 
                 counter+=1;
             }
-        } else if args[2] == "remove" {
+        } else if args[2] == "rm" {
             let mut counter = 0;
             while counter < valid_len {
                 conn.execute("DELETE FROM entries WHERE id = (?1)", [&valid_args[counter]])?;
